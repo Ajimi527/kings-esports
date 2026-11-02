@@ -8,23 +8,19 @@ export default function Hero() {
   const { t } = useI18n();
 
   return (
-    <section className="grain relative isolate overflow-hidden bg-brand text-white">
-      {/* Atmosphere: warm centre-right glow, darkening towards the edges */}
-      <div
+    <section className="grain relative isolate overflow-hidden bg-brand-deep text-white">
+      {/* Official banner artwork (text removed), brightened towards the brand red */}
+      <img
+        src={siteConfig.heroBackground}
+        alt=""
         aria-hidden
-        className="absolute inset-0 -z-20 bg-[radial-gradient(ellipse_60%_70%_at_72%_42%,var(--color-brand-light),transparent_70%),linear-gradient(135deg,#e0402f_0%,var(--color-brand)_38%,var(--color-brand-dark)_72%,var(--color-brand-deep)_100%)]"
+        fetchPriority="high"
+        className="absolute inset-0 -z-30 h-full w-full object-cover object-[62%_center] [filter:saturate(1.2)_brightness(1.35)]"
       />
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_90%_90%_at_50%_45%,transparent_55%,rgba(0,0,0,0.38)_100%)]"
-      />
-      {/* Oversized outlined wordmark */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -bottom-[0.14em] start-[-1.5%] -z-10 select-none whitespace-nowrap font-display text-[31vw] font-extrabold uppercase leading-none text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.1)]"
-      >
-        {siteConfig.shortName}
-      </div>
+      {/* Brand-red wash keeps the 60% red balance */}
+      <div aria-hidden className="absolute inset-0 -z-20 bg-[linear-gradient(100deg,rgba(228,30,32,0.9)_0%,rgba(221,28,30,0.6)_45%,rgba(221,28,30,0.15)_100%)] mix-blend-screen" />
+      {/* Legibility: darker behind the text, vignette at the edges */}
+      <div aria-hidden className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(40,0,3,0.12)_0%,rgba(40,0,3,0.05)_55%,transparent_100%),radial-gradient(ellipse_100%_100%_at_50%_45%,transparent_60%,rgba(0,0,0,0.4)_100%)] rtl:bg-[linear-gradient(270deg,rgba(40,0,3,0.12)_0%,rgba(40,0,3,0.05)_55%,transparent_100%),radial-gradient(ellipse_100%_100%_at_50%_45%,transparent_60%,rgba(0,0,0,0.4)_100%)]" />
       {/* Slanted brand bars: black + white */}
       <div aria-hidden className="absolute inset-y-0 end-0 -z-10 hidden w-40 overflow-hidden lg:block">
         <div className="absolute -inset-y-10 end-12 w-10 -skew-x-[18deg] bg-ink rtl:skew-x-[18deg]" />
@@ -35,10 +31,10 @@ export default function Hero() {
         {/* Logo: first on mobile, right-hand column on desktop */}
         <div className="hero-in order-first flex justify-center lg:order-last" style={{ ['--d' as string]: '150ms' }}>
           <Logo
-            size={440}
-            blend
+            size={460}
+            mark
             priority
-            className="h-auto w-[min(52vw,220px)] drop-shadow-[0_30px_60px_rgba(0,0,0,0.35)] sm:w-[min(52vw,300px)] lg:w-[min(36vw,460px)]"
+            className="h-auto w-[min(52vw,220px)] drop-shadow-[0_24px_50px_rgba(0,0,0,0.55)] sm:w-[min(52vw,300px)] lg:w-[min(34vw,440px)]"
           />
         </div>
 

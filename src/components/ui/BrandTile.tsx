@@ -25,14 +25,10 @@ export default function BrandTile({ label, className = '', tone = 'red' }: Brand
         aria-hidden
       />
       <img
-        src={siteConfig.logo.src}
+        src={siteConfig.logo.mark}
         alt=""
         aria-hidden
-        className="absolute end-[-8%] top-1/2 h-[120%] -translate-y-1/2 opacity-30 mix-blend-soft-light"
-        style={{
-          WebkitMaskImage: 'radial-gradient(closest-side, #000 60%, transparent 100%)',
-          maskImage: 'radial-gradient(closest-side, #000 60%, transparent 100%)',
-        }}
+        className="absolute end-[-6%] top-1/2 h-[112%] -translate-y-1/2 opacity-[0.16]"
       />
       {label && (
         <span className="absolute bottom-3 start-4 font-display text-sm font-bold uppercase tracking-[0.25em] text-white/90">

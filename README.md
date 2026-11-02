@@ -146,5 +146,6 @@ After editing content: save the file → `npm run build` (or just push if you us
 ## 11. Notes
 
 - Kings Esports is **not** affiliated with or endorsed by Supercell. The footer states this.
-- The supplied logo has a Display P3 colour profile; the site uses an sRGB copy (`public/images/kings-logo.png`) so the red looks identical in every browser. Your untouched original is in `assets-source/`. For maximum sharpness, supply an SVG or a PNG of 1000 px or more when you have one and replace the file in `public/images/`.
+- **Brand images** live in `public/images/`: `kings-logo.jpg` (+ `@2x`) is the official logo on its red background, `kings-mark.png` is the same emblem as a transparent white version, and `hero-bg.jpg` is your banner artwork with the baked-in text removed. Your untouched originals are in `assets-source/`. To change an image, replace the file with one of the same name (or edit the paths in `src/config/site.ts`).
+- `public/og-banner.jpg` is the preview image shown when the site link is shared (Discord, X, WhatsApp). Its address is set in `index.html` and points to `https://ajimi527.github.io/kings-esports/`. If you later move to a custom domain, update that address.
 - Expanding to other games later: add a `game` value to tournaments and players (the data types already store the game per tournament).

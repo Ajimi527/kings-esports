@@ -38,9 +38,14 @@ export const siteConfig = {
 
   /** Public paths of brand assets (files live in /public/images). */
   logo: {
-    src: './images/kings-logo.png',
-    src2x: './images/kings-logo@2x.png',
+    /** Official logo on its red background (navbar, footer, About) */
+    src: './images/kings-logo.jpg',
+    src2x: './images/kings-logo@2x.jpg',
+    /** Same logo as a transparent white emblem, for use on any coloured background (hero, cards) */
+    mark: './images/kings-mark.png',
   },
+  /** Cinematic hero background (cleaned version of the official banner, no text) */
+  heroBackground: './images/hero-bg.jpg',
 } as const;
 
 export type SocialKey = keyof typeof siteConfig.socials;

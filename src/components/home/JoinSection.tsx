@@ -37,8 +37,9 @@ export default function JoinSection() {
           <div className="cut relative overflow-hidden bg-ink p-8 text-white md:p-12">
             <Logo
               size={320}
-              blend
-              className="pointer-events-none absolute -end-16 -top-16 h-72 w-72 opacity-[0.14] mix-blend-screen"
+              mark
+              decorative
+              className="pointer-events-none absolute -end-12 -top-12 h-72 w-72 opacity-[0.12]"
             />
             <ul className="relative space-y-6">
               {j.points.map((point) => (
